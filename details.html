@@ -9,32 +9,73 @@
       name="keywords"
       content="HTML, CSS, JavaScript, _REPLACE_WITH_KEYWORD_"
     />
-    <meta name="author" content="_YOUR_NAME_" />
+    <meta name="author" content="Krystian Dronio Cruz" />
     <link rel="stylesheet" href="/style.css" />
-    <!-- TODO: Import Javascript -->
-    <title>_REPLACE_WITH_OBJECT_TITLE | _REPLACE_SITE_NAME</title>
+    <script src="/src/js/details.js" type="module"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <title>Details Page</title>
   </head>
   <body class="animate__animated animate__fadeIn">
     <header class="l-header">
-      <h1><span id="js-h1">_REPLACE_WITH_OBJECT_TITLE</span>Details</h1>
+      <div class="header-logo">
+        <a class="home-logo" href=""
+          ><img
+            class="rnm-header-logo"
+            src="src/image/kindpng_1567451.png"
+            alt=""
+        /></a>
+      </div>
+      <span class="drop-down-nav"
+        ><i class="fa-sharp fa-solid fa-angles-down animate__animated"></i
+      ></span>
+
+      <nav class="nav-list animate__animated animate__fadeInDown">
+        <ul class="ul-list">
+          <li class="list-of-links">
+            <a class="links" href="index.html"> Home</a>
+          </li>
+          <li class="list-of-links">
+            <a class="links" href="location.html"> Location</a>
+          </li>
+
+          <div class="mdq-logo">
+            <a class="home-logo" href=""
+              ><img class="rnm-logo" src="src/image/kindpng_1567451.png" alt=""
+            /></a>
+          </div>
+
+          <li class="list-of-links">
+            <a class="links" href="episodes.html"> Episodes</a>
+          </li>
+          <li class="list-of-links">
+            <a class="links" href="contact.html"> Contact</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-   
-    <main class="l-main"> 
-      
-      <div class="container-backBtn"> 
-        <a class= "backBtn" href="index.html">Back to characters</a></div>
-    </div>
-    
+    <main class="l-main main-container">
+      <div class="container-backBtn">
+        <a class="backBtn" href="index.html">Back to characters</a>
+      </div>
 
       <div class="details">
         <div class="details-card-container">
-          <div class ="details-cardInfo">
-
-
-          </div>
+          <div class="details-cardInfo"></div>
         </div>
       </div>
+
+      <section class="section-featured">
+        <div>Featured characters</div>
+      </section>
+
+      <section
+        class="extra-cards-details details-card-container ram-character-container"
+      ></section>
+
       <article>
         <!-- TODO: Insert loading indicator and replace with object detail properties -->
       </article>
@@ -43,7 +84,5 @@
     <footer class="l-footer">
       <small>Created with ❤️ by _REPLACE_</small>
     </footer>
-
-    <script src="/src/js/details.js" type="module"></script>
   </body>
 </html>

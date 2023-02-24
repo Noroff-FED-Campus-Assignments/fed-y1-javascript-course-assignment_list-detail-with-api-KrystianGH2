@@ -9,25 +9,94 @@
       name="keywords"
       content="HTML, CSS, JavaScript, _REPLACE_WITH_KEYWORD_"
     />
-    <meta name="author" content="_YOUR_NAME_" />
+    <meta name="author" content="Krystian Dronio Cruz" />
     <link rel="stylesheet" href="/style.css" />
-    <!-- TODO: Import Javascript -->
-    <title>Contact Us | _REPLACE_SITE_NAME</title>
+    <script src="/src/js/contact.js" type="module"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <title>Contact US</title>
   </head>
   <body class="animate__animated animate__fadeIn">
     <header class="l-header">
-      <h1>Contact Us</h1>
-    </header>
+      <div class="header-logo">
+        <a class="home-logo" href=""
+          ><img
+            class="rnm-header-logo"
+            src="src/image/kindpng_1567451.png"
+            alt=""
+        /></a>
+      </div>
+      <span class="drop-down-nav"
+        ><i class="fa-sharp fa-solid fa-angles-down animate__animated"></i
+      ></span>
 
+      <nav class="nav-list animate__animated animate__fadeInDown">
+        <ul class="ul-list">
+          <li class="list-of-links">
+            <a class="links" href="index.html"> Home</a>
+          </li>
+          <li class="list-of-links">
+            <a class="links" href="location.html"> Location</a>
+          </li>
+
+          <div class="mdq-logo">
+            <a class="home-logo" href=""
+              ><img class="rnm-logo" src="src/image/kindpng_1567451.png" alt=""
+            /></a>
+          </div>
+
+          <li class="list-of-links">
+            <a class="links" href="episodes.html"> Episodes</a>
+          </li>
+          <li class="list-of-links">
+            <a class="links" href="contact.html"> Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main class="l-main">
       <article role="doc-introduction">
-        <h2>Contact form</h2>
+        <h2 class = "h2-contact">Contact Us</h2>
 
-        <p>_REPLACE_INTRODUCTION_</p>
+        <h3 class="h3-intro">Subscribe to our Mailing list</h3>
+        <h5 class="form-text">Creating and account is free --</h5>
+        <h6 class="form-text-2">and won't take longer than a couple of seconds.</h6>
       </article>
 
-      <section role="form-section">
-        <!-- TODO: Creat Form elements here -->
+      <section class="form-section" role="form-section" >
+
+        <form class ="form" id="formJs" autocomplete="on">
+          <div class="form-container">
+
+            <label class="form-label" for="firstName">First Name</label>
+            <input type="text" class="input">
+
+            <label class="form-label" for="lastName">Last Name</label>
+            <input type="text" class="input">
+
+            <label class="form-label" for="email">Email</label>
+            <input type="email" class="input">
+
+            
+            <label class="form-label" for="password">Password</label>
+            <input type="password" class="input">
+
+            <p class="p-message">Insert your messages here ... </p>
+            <textarea name="textarea" id="text-area" cols="30" rows="10"></textarea>
+
+
+
+
+
+
+
+
+
+          </div>
+        </form>
+        
       </section>
     </main>
 

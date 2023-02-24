@@ -5,68 +5,82 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="_REPLACE_WITH_DESCRIPTION_" />
-    <meta
-      name="keywords"
-      content="HTML, CSS, JavaScript, _REPLACE_WITH_KEYWORD_"
-    />
-    <meta name="author" content="_YOUR_NAME_" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, _REPLACE_WITH_KEYWORD_"/>
+    <meta name="author" content="Krystian Dronio Cruz" />
     <link rel="stylesheet" href="/style.css" />
-    <!-- TODO: Import Javascript -->
-    <title>Rick and Morty API</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" >
+    <script src="src/js/app.js" defer></script>
+    <title>Rick & Morty API</title>
   </head>
+  
+  
+  
   <body class="animate__animated animate__fadeIn">
     <header class="l-header">
+      <div class="header-logo"><a class="home-logo
+        " href=""><img class="rnm-header-logo" src="src/image/kindpng_1567451.png" alt=""></a></div>
+        <span class="drop-down-nav  "><i class="fa-sharp fa-solid fa-angles-down animate__animated "></i></span>
+        
+        
+        
+        <nav class="nav-list animate__animated animate__fadeInDown">
+          <ul class="ul-list">
+            <li class="list-of-links"><a class="links" href="index.html"> Home</a></li>
+            <li class="list-of-links"><a class="links" href="location.html"> Location</a></li>
+            
+            <div class="mdq-logo"><a class="home-logo" 
+              href=""><img class="rnm-logo" src="src/image/kindpng_1567451.png" alt=""></a></div>
+              
+              <li class="list-of-links"><a class="links" href="episodes.html"> Episodes</a></li>
+              <li class="list-of-links"><a class="links" href="contact.html"> Contact</a></li>
+            </ul>
+          </nav>
+          
+        </header>
 
-        <div class="logo">R&M</div>
-      <nav class="nav-list">
-        <ul class="ul-list">
-          <li class="list-of-links"><a class="links" href="index.html"> Home</a></li>
-          <li class="list-of-links"><a class="links" href="details.html"> Location</a></li>
-          <li class="list-of-links"><a class="links" href="contact.html"> Contact</a></li>
-        </ul>
-      </nav>
+        
+        
+        
+        
+        <main class="l-main">
+          
+          <div class="image-carousel-container">
+            <img id="images-slideshow" >
+          </div>
+
+          <!-- <section role="search"></section> -->
+          <article role="doc-introduction">
+            <h2 class="h2-rNm-text"> Rick & Morty API</h2>
+            <div class="h3-find-characters-container">
+              <h3 class="h3-find-characters">Find your favourite rick and morty characters</h3>
+            </div>
+          </article>
+          
+          
+         
+          
+          <div class="searchBar"> <i class="fa-solid fa-magnifying-glass"></i>
+            <input class="search-bar" type="search" id="input" placeholder=" Search Characters..." />
+          </div>
+
+        
+            
+            <section role="list">
+              <div class="ram-character-container"> </div>
+              <div id="js-list-container">_LOADING_INDICATOR_GOES_HERE_</div>
+            </section>
+
+            
+            <!-- <div class="no-results-holder">
+              <h3 class="no-result-item">No results found!</h3>
+            </div>
+             -->
   
-    </header>
-    
-    <main class="l-main">
-      <section role="search"></section>
-      <article role="doc-introduction">
-        <h2>List</h2>
-        <p class="getApi">Get Api</p>
-      </article>
-      
-      <div class="searchBar">
-        <input type="search" id="input" placeholder=" Search Characters..." />
-      </div>
-<!--       
-      <div class="sort">
-        <button id="deadCharacters"> Dead </button>
-        <select id="js-select-filter" name="orderBy">
-          <option value="select"> Filter by </option>
+            
+            <footer class="l-footer">
+              <small>Created with ❤️ by _REPLACE_</small>
+            </footer>
+            
+          </body>
+          </html>
           
-          <option id ="filter-by-alive" value="name-ascending"> A-Z </option>
-          <option id ="filter-by-dead" value="name-descending"> Z-A </option>
-          
-          
-        </select>
-      </div> -->
-      
-      <section role="list">
-        <div class="ram-character-container"></div>
-        <div id="js-list-container">_LOADING_INDICATOR_GOES_HERE_</div>
-      </section>
-      <div class="no-results-holder">
-        <h3 class="no-result-item">No results found!</h3>
-      </div>
-
-
-      
-
-
-    <footer class="l-footer">
-      <small>Created with ❤️ by _REPLACE_</small>
-    </footer>
-
-    <script src="main.js" type="module"></script>
-  </body>
-</html>
