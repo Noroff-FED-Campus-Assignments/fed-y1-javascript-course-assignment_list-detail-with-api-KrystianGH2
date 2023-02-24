@@ -22,10 +22,28 @@ body {
 
 .l-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   grid-area: header;
   width: 100%;
   padding: var(--size-fluid-1);
+}
+
+.nav-list{
+  display: flex;
+}
+
+.ul-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+ 
+}
+
+.list-of-links{
+list-style: none;
+
+ 
 }
 
 .l-main {

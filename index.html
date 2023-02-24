@@ -12,29 +12,61 @@
     <meta name="author" content="_YOUR_NAME_" />
     <link rel="stylesheet" href="/style.css" />
     <!-- TODO: Import Javascript -->
-    <title>_REPLACE_SITE_NAME</title>
+    <title>Rick and Morty API</title>
   </head>
   <body class="animate__animated animate__fadeIn">
     <header class="l-header">
-      <h1>Home</h1>
-    </header>
 
+        <div class="logo">R&M</div>
+      <nav class="nav-list">
+        <ul class="ul-list">
+          <li class="list-of-links"><a class="links" href="index.html"> Home</a></li>
+          <li class="list-of-links"><a class="links" href="details.html"> Location</a></li>
+          <li class="list-of-links"><a class="links" href="contact.html"> Contact</a></li>
+        </ul>
+      </nav>
+  
+    </header>
+    
     <main class="l-main">
       <section role="search"></section>
-
       <article role="doc-introduction">
         <h2>List</h2>
-
-        <p>_REPLACE_INTRODUCTION_</p>
+        <p class="getApi">Get Api</p>
       </article>
-
+      
+      <div class="searchBar">
+        <input type="search" id="input" placeholder=" Search Characters..." />
+      </div>
+<!--       
+      <div class="sort">
+        <button id="deadCharacters"> Dead </button>
+        <select id="js-select-filter" name="orderBy">
+          <option value="select"> Filter by </option>
+          
+          <option id ="filter-by-alive" value="name-ascending"> A-Z </option>
+          <option id ="filter-by-dead" value="name-descending"> Z-A </option>
+          
+          
+        </select>
+      </div> -->
+      
       <section role="list">
+        <div class="ram-character-container"></div>
         <div id="js-list-container">_LOADING_INDICATOR_GOES_HERE_</div>
       </section>
-    </main>
+      <div class="no-results-holder">
+        <h3 class="no-result-item">No results found!</h3>
+      </div>
+
+
+      
+
 
     <footer class="l-footer">
       <small>Created with ❤️ by _REPLACE_</small>
     </footer>
+
+    <script src="main.js" type="module"></script>
   </body>
 </html>

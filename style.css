@@ -11,3 +11,106 @@
 @import "src/css/layout.css";
 @import "src/css/form.css";
 @import "src/css/ui.css";
+
+
+/* back to characters buttons */
+.backBtn{
+    align-items: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: .2s;
+    position: relative;
+
+  }
+  .backBtn:hover::after{
+   opacity: 100%;
+   width: 100%;
+  
+    
+  }
+  .backBtn:hover{
+    color: whitesmoke;
+    transform: scale(1.03);
+  }
+
+
+  .backBtn::after{
+    content: '';
+    border-bottom: 2px solid #3e66a3 ;
+    height: 3px;;
+    display: block;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: all .3s;
+    opacity: 0; 
+  }
+
+  .container-backBtn{
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    margin: 50px 0 0 40px;
+
+  }
+
+
+
+
+/* cards */
+.span-status-gender{
+    display: flex;  
+    gap: 10px;
+}
+
+.span-status-gender-alive::before {
+    content:"";
+    display: block;
+    border-radius: 50%;
+    background-color: greenyellow;
+    width: 0.5rem;
+    height: 0.5rem;
+    align-self: center;
+}
+
+.span-status-gender-dead::before {
+    content:"";
+    display: block;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 0);
+    width: 0.5rem;
+    height: 0.5rem;
+    align-self: center;
+}
+
+.span-status-gender-unknown::before {
+    content:"";
+    display: block;
+    border-radius: 50%;
+    background-color: grey;
+    width: 0.5rem;
+    height: 0.5rem;
+    align-self: center;
+}
+
+.cardHolder{
+    display: flex;
+    align-items: center;
+    line-height: 3 0px;
+    gap: 25px;
+    border-radius: 10px;
+    margin: 20px 0 20px 0;
+    width: 700px;
+    background-color: gray;
+    color:  black;
+    border: 1px solid black;
+}
+
+.cardInfo{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 10px 0;
+}
+
