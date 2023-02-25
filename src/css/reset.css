@@ -58,3 +58,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+input {
+  outline-offset: 1px;
+}
+
+:where(:not(:active):focus-visible) {
+  outline-offset: 1px;
+}

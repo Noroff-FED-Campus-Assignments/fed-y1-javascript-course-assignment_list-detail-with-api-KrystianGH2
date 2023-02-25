@@ -2,7 +2,7 @@
 @import "open-props/style";
 
 /* optional imports that use the props */
-@import "open-props/normalize";
+/* @import "open-props/normalize"; */
 @import "animate.css";
 
 @import "src/css/variables.css";
@@ -11,4 +11,7 @@
 @import "src/css/layout.css";
 @import "src/css/form.css";
 @import "src/css/ui.css";
+@import "src/css/details.css";
+@import "src/css/location.css";
+
 
