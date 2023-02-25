@@ -29,7 +29,7 @@ async function fetchLocation() {
                         <span><i class="fa-solid fa-angle-down"></i></span>
                     </div>
                     <div class="card-box animate__animated animate__fadeInRight">
-                        <div class="card-info-elements">Dimension: ${location.dimension}</div>
+                        <div class="card-info-elements"> ${location.dimension}</div>
                         <div class="card-info-elements">Type: ${location.type}</div>
                         <div class="card-info-elements">ID: ${location.id}</div>
                     </div>
