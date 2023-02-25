@@ -248,7 +248,48 @@
 }
 
 
-/* error messages */
+@media screen and (min-width: 768px){
+  .form-section{
+    margin: 20px;
+  }
+}
+
+@media screen and (min-width: 1020px){
+  .form-section{
+    margin: 20px;
+  }
+
+  input, label, textarea{
+    margin-left: 20px;
+    width: 600px;
+  }
+
+  .p-message{
+    margin-left: 20px;
+  }
+
+  
+
+}
+
+@media screen and (min-width: 1440px){
+  .form-section{
+    margin: 50px 225px;
+  }
+
+  input, label{
+    margin-left: 20px;
+    width: 600px;
+    height: 40px;
+  }
+
+  .p-message{
+    margin-left: 20px;
+  }
+
+  
+
+}
 
 
 

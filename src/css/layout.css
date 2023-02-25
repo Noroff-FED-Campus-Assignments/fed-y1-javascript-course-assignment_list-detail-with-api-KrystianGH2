@@ -595,13 +595,42 @@ align-items: center;
   }
 
 
+}
+
+@media screen and (min-width: 1440px){
+
+  article{
+    margin-left:240px;
+  }
+
+  .searchBar{
+    margin: 20px 0 50px 242px;
+  }
+
   
 
-
-
-
-
 }
+
+@media screen and (min-width: 1920px){
+  article{
+    margin-left: 250px ;
+  }
+
+  .searchBar{
+    margin: 20px 0 50px 255px;
+  }
+
+  .ram-character-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 100px 50px 100px  ;
+   
+  }
+}
+
+
+
 
   
 
