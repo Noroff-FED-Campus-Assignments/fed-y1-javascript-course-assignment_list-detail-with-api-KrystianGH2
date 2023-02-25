@@ -1,3 +1,5 @@
+import { displayErrorMessage } from "./displayError.js";
+
 const dropDownBtn = document.querySelector('.drop-down-nav');
 const navList = document.querySelector(".nav-list");
 dropDownBtn.addEventListener('click', () => {
@@ -58,7 +60,7 @@ async function fetchEpisodes() {
                 
         
             } catch(error) {
-                    console.log(error)        
+                episodesContainer.innerHTML = displayErrorMessage(error);     
                 }        
             }        
             

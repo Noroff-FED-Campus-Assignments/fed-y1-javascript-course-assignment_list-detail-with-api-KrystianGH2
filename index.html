@@ -9,8 +9,8 @@
     <meta name="author" content="Krystian Dronio Cruz" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" >
-    <script defer type="module" src="src/js/displayError.js"></script>
-    <script defer type="module" src="src/js/app.js"></script>
+    <script defer type= "module" src="src/js/displayError.js"></script>
+    <script defer type= "module" src="src/js/app.js"></script>
     <title>Rick & Morty API</title>
   </head>
   
@@ -46,9 +46,9 @@
         <main class="l-main">
           
           <div class="image-carousel-container">
-            <img id="images-slideshow" >
+            <img class ="image-slideshow" id="images-slideshow" >
           </div>
-
+          
           <!-- <section role="search"></section> -->
           <article role="doc-introduction">
             <h2 class="h2-rNm-text"> Rick & Morty API</h2>
@@ -58,19 +58,25 @@
           </article>
           
           
-         
+          
           
           <div class="searchBar"> <i class="fa-solid fa-magnifying-glass"></i>
             <input class="search-bar" type="search" id="input" placeholder=" Search Characters..." />
           </div>
-
-        
+          
+          
+          
+          <section role="list">
+            <div class="ram-character-container">
+                <div class="loaders"></div> 
+              </div>
+              
+            </div>
             
-            <section role="list">
-              <div class="ram-character-container"> </div>
-              <div id="js-list-container">_LOADING_INDICATOR_GOES_HERE_</div>
             </section>
+            
 
+          
             
             <!-- <div class="no-results-holder">
               <h3 class="no-result-item">No results found!</h3>
@@ -78,9 +84,11 @@
              -->
   
             
-            <footer class="l-footer">
-              <small>Created with ❤️ by _REPLACE_</small>
-            </footer>
+         
+    <footer class="l-footer">
+      <small><img src="src/image/kindpng_1567451.png" alt="" /></small>
+      <small>Created with ❤️ by Krystian Cruz</small>
+    </footer>
             
           </body>
           </html>

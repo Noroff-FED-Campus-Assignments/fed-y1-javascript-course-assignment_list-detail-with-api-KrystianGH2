@@ -1,3 +1,5 @@
+import { displayErrorMessage } from "./displayError";
+
 const queryString =  document.location.search
 const params = new URLSearchParams(queryString)
 const id = params.get('id');
@@ -21,7 +23,7 @@ async function fetchCharacters() {
 
         }   
              catch(error){
-             console.log(error);
+                detailsCardInfo.innerHTML = displayErrorMessage();
             }
 
 }
@@ -102,8 +104,8 @@ async function fetchExtraCards(){
 
 
 
-    } catch(err){
-        console.log(err)
+    } catch(error){
+        extraCards.innerHTML = displayErrorMessage();
     }
 }
 fetchExtraCards()

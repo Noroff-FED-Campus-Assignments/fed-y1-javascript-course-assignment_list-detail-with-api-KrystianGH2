@@ -104,4 +104,10 @@
     display: block;
 }
 
+.loader-holder {
+    display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+  
 

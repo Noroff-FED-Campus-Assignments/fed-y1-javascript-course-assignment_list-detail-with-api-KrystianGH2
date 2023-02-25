@@ -1,5 +1,4 @@
-
-
+import  {displayError}  from "./displayError.js";
 const urlLocation =  "https://rickandmortyapi.com/api/location/?page=5"
 const locationContainer = document.querySelector(".location-card-info")
 
@@ -51,7 +50,7 @@ async function fetchLocation() {
                 
         
             } catch(error) {
-                    console.log(error)        
+                locationContainer.innerHTML = displayError()        
                 }        
             }        
             

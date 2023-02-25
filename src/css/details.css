@@ -163,4 +163,10 @@
     letter-spacing: 1px;
     text-shadow: 2px 4px 4px rgb(153 198 146);
   }
+
+  .loader-holder {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
   
