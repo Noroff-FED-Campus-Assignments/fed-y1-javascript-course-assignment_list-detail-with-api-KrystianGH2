@@ -420,6 +420,10 @@ align-items: center;
   border-radius: 5px;
 }
 
+.article, .search-bar{
+  transition: .3s;
+}
+
 
 @media screen and (min-width: 768px){
 
@@ -567,14 +571,14 @@ align-items: center;
     
   }
 
-  article{
-    margin-left: 35px;
+  .article{
+    margin-left: 51px;
   }
 
   .searchBar{
     width: 400px;
     height: 40px;
-    margin: 20px 0 50px 35px;
+    margin: 20px 0 50px 51px;
    
   }
 
@@ -604,27 +608,53 @@ align-items: center;
 
 }
 
-@media screen and (min-width: 1440px){
-
-  article{
-    margin-left:240px;
+@media screen and (min-width: 1129px){
+  .article{
+    margin-left:100px;
   }
 
   .searchBar{
-    margin: 20px 0 50px 242px;
+    margin: 20px 0 50px 100px;
   }
+
+}
+
+
+
+@media screen and (min-width: 1440px){
+
+  .article{
+    margin-left:249px;
+  }
+
+  .searchBar{
+    margin: 20px 0 50px 249px;
+  }
+
 
   
 
 }
 
-@media screen and (min-width: 1920px){
-  article{
-    margin-left: 250px ;
+@media screen and (min-width: 1760px){
+  .article{
+    margin-left: 175px ;
   }
 
   .searchBar{
-    margin: 20px 0 50px 255px;
+    margin: 20px 0 50px 175px;
+  }
+
+
+}
+
+@media screen and (min-width: 1920px){
+  .article{
+    margin-left: 265px ;
+  }
+
+  .searchBar{
+    margin: 20px 0 50px 265px;
   }
 
   .ram-character-container{
@@ -637,13 +667,23 @@ align-items: center;
 }
 
 @media screen and (min-width: 2500px){
-  article {
-    margin-left: 344px;
+  .article{
+    margin-left: 315px;
+  }
+  .searchBar {
+    margin: 20px 0 50px 315px;
+    }
 }
 
+@media screen and (min-width: 2560px){
+
+  .article{
+    margin-left: 344px;
+  }
+
 .searchBar {
-  margin: 20px 0 50px 348px;
-}
+  margin: 20px 0 50px 344px;
+  }
 }
 
 
