@@ -2,37 +2,135 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="_REPLACE_WITH_DESCRIPTION_" />
+    <meta name="description" content="Contact Us" />
     <meta
       name="keywords"
-      content="HTML, CSS, JavaScript, _REPLACE_WITH_KEYWORD_"
+      content="HTML, CSS, JavaScript"
     />
-    <meta name="author" content="_YOUR_NAME_" />
+    <meta name="author" content="Krystian Dronio Cruz" />
     <link rel="stylesheet" href="/style.css" />
-    <!-- TODO: Import Javascript -->
-    <title>Contact Us | _REPLACE_SITE_NAME</title>
+    <script defer src="/src/js/contact.js" type="module"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <title> Contact US</title>
+    <link rel="icon" type="image/png" href="/src/image/favicon-32x32.png">
   </head>
   <body class="animate__animated animate__fadeIn">
     <header class="l-header">
-      <h1>Contact Us</h1>
-    </header>
+      <div class="header-logo">
+        <a class="home-logo" href="index.html"
+          ><img
+            class="rnm-header-logo"
+            src="src/image/kindpng_1567451.png"
+            alt=""
+        /></a>
+      </div>
+      <span class="drop-down-nav"
+        ><i class="fa-sharp fa-solid fa-angles-down animate__animated"></i
+      ></span>
 
+      <nav class="nav-list animate__animated animate__fadeInDown">
+        <ul class="ul-list">
+          <li class="list-of-links">
+            <a class="links" href="index.html"> Home</a>
+          </li>
+          <li class="list-of-links">
+            <a class="links" href="location.html"> Location</a>
+          </li>
+
+          <div class="mdq-logo">
+            <a class="home-logo" href="index.html"
+              ><img class="rnm-logo" src="src/image/kindpng_1567451.png" alt=""
+            /></a>
+          </div>
+
+          <li class="list-of-links">
+            <a class="links" href="episodes.html"> Episodes</a>
+          </li>
+          <li class="list-of-links">
+            <a class="links" href="contact.html"> Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main class="l-main">
       <article role="doc-introduction">
-        <h2>Contact form</h2>
-
-        <p>_REPLACE_INTRODUCTION_</p>
+        <h3 class="h3-intro">Subscribe to our Mailing list</h3>
+        <h5 class="form-text">Creating and account is free --</h5>
+        <h6 class="form-text-2">
+          and won't take longer than a couple of seconds.
+        </h6>
       </article>
 
-      <section role="form-section">
-        <!-- TODO: Creat Form elements here -->
+      <section class="form-section" role="form-section">
+        <form class="form" id="formJs" autocomplete="on">
+          <div class="form-container">
+            <div class="form-group">
+              <label class="form-label" for="firstName">First Name</label>
+              <input 
+                id="first-name-js" 
+                type="text"
+                class="first-name-input"
+                placeholder="Bob"
+              />
+              <span id="first-name-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="lastName">Last Name</label>
+              <input id="last-name-js" type="text" class="last-name-input" placeholder="James" />
+              <span id="last-name-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input
+                id="email-js"
+                type="email"
+                class="email-input"
+                placeholder="bob@gmail.com"
+              />
+              <span id="email-error"></span>
+              
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="password">Password</label>
+              <input id="password-js" type="password" class="password-input" />
+              <span id="password-error"></span>
+            </div>
+
+            <div class="form-group">
+              <p class="p-message">Insert your messages here ...</p>
+              <textarea
+                name="textarea"
+                id="text-area-js"
+                cols="30"
+                rows="10"
+                placeholder="Text ..."
+              ></textarea>
+              <span id="textArea-error"></span>
+            </div>
+
+
+            
+          </div>
+          <div class="submitBtn">
+            <input id="submit-js" type="submit" class="submit">
+
+          </div>
+        </form>
       </section>
     </main>
 
+   
+
     <footer class="l-footer">
-      <small>Created with ❤️ by _REPLACE_</small>
+      <small><img src="src/image/kindpng_1567451.png" alt="" /></small>
+      <small>Created with ❤️ by Krystian Cruz</small>
     </footer>
   </body>
 </html>

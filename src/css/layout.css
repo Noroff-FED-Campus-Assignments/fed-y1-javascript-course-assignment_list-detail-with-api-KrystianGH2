@@ -4,6 +4,12 @@
  * @tutorial https://web.dev/learn/css/layout/
  * @example https://fed-vocational-astro-course.vercel.app/en/html-css/module-3/css-grids
  */
+ @font-face{
+  font-family: rickNmorty;
+  src: url(src/fonts/rickNmorty.ttf);
+ }
+
+
 
 body {
   margin: 0;
@@ -11,30 +17,240 @@ body {
   min-width: 320px;
   place-items: flex-start;
   min-height: 100vh;
-  display: grid;
+  /* display: grid;
   grid-template-columns: auto;
   grid-template-rows: minmax(62px, auto) 1fr auto;
   grid-template-areas:
     "header"
     "main"
-    "footer";
+    "footer"; */
+    background-color:rgb(206, 206, 206);
 }
+
+/* header */
 
 .l-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;;
+  justify-content: center;
+  align-items: center;
   grid-area: header;
   width: 100%;
   padding: var(--size-fluid-1);
 }
+.drop-down-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin-top: 5px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  animation: var(--animation-float),
+  var(--animation-blink);
+  transition: 1000ms ease-in-out;
+  cursor: pointer;
+  }
+
+  .drop-down-rotate{
+    color: black;
+    margin-bottom: 10px;
+    animation: var(--animation-float),
+    var(--animation-blink);
+    cursor: pointer;
+    rotate: 180deg;
+    transition: 1000ms ease-in-out;
+    }
+
+  
+.drop-down-nav:hover{
+  transform: scale(1.2);
+  transition: 200ms ease;
+    
+}
+
+
+.nav-list{
+  display: flex;
+  background-color: #b9b9b9;
+  width: 100%;
+  justify-content: center;
+  padding: 20px;
+  display: none;
+}
+
+.nav-list-show{
+  display: flex;
+  background-color: #b9b9b9;
+  width: 100%;
+  justify-content: center;
+  padding: 20px;
+  transition: 1s ease-in-out;
+}
+
+.nav-list-hide{
+  display: none;
+}
+
+.ul-list{
+  padding: 0;
+  margin: 0;
+  gap: 15px;
+  align-items: center;
+  display: flex;
+  flex-direction: column; 
+}
+
+.list-of-links{
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.links{
+  padding: 0;
+  position: relative;
+  color: black;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.links::before{
+  content: '';
+  border: 2px solid black;
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  left: 2px;
+  bottom: -6px;
+  box-shadow: var(--shadow-1);
+  opacity: 0;
+  transition: 0.3s ease;
+  
+}
+.links:hover::before{
+  opacity: 100%;
+  width: 100%;
+  
+  
+}
+
+.links:hover{
+  text-shadow: 3px 2px 3px rgb(132, 131, 131);;
+  transition: 250ms ease;
+ 
+}
+
+.links:active:before{
+  opacity: 100%;
+  width: 100%;
+  
+  
+}
+
+.mdq-logo{
+  display: none;
+}
+
+.rnm-header-logo{
+  width: 200px;
+  text-shadow: 8px 8px 8px rgb(132, 131, 131);
+  
+}
+
+
+
+
+/* header */
 
 .l-main {
   display: flex;
   flex-direction: column;
-  grid-area: main;
   width: 100%;
   padding: var(--size-fluid-2);
 }
+
+.h2-rNm-text{
+  color: rgb(129, 129, 129);
+  padding-top: 50px;
+  font-size: 30px;
+  margin-left: 5px;
+  text-shadow: 2px 4px 4px rgb(153, 198, 146);
+
+}
+
+.h3-find-characters{
+  color: black;
+  font-size: 20px;
+  width: 350px;
+  margin: 10px 0 20px 13px;
+  text-shadow: 2px 4px 4px rgb(153, 198, 146);
+}
+
+.h3-find-characters::before{
+  content: '';
+  border: 2px solid black;
+  margin-top: 3px;
+  margin-left: -7px;
+  height: 37px;
+  margin-right: 3px;
+  position: absolute;
+  
+}
+
+.searchBar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  border-radius: 5px;
+  background-color: rgb(190, 190, 190);
+  margin: 0px 0 20px 4px;
+  
+}
+.search-bar{
+  width: 100%;
+  height: 30px;
+  background-color: rgb(190, 190, 190);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding-right: 10px;
+}
+
+
+input {
+  outline: 0px ;
+}
+
+.fa-solid{
+  color: black;
+  padding-left: 10px;
+}
+
+
+
+/* slide show carousel */
+
+.image-carousel-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 5px 10px 5px;
+  height: 200px;
+  justify-content: center;
+}
+
+
+.images-for-slideshow{
+  width: fit-content;
+  border-radius: 10px;
+  align-self: center;
+  justify-self: center;
+  animation: var(--animation-pulse);
+
+}
+
+/* slide show carousel */
 
 .l-footer {
   display: flex;
@@ -42,6 +258,10 @@ body {
   grid-area: footer;
   width: 100%;
   padding: var(--size-fluid-1);
+}
+
+.l-footer img {
+  width: 100px;
 }
 
 .l-content {
@@ -53,3 +273,428 @@ body {
   max-width: 1000px;
   margin: 40px auto 0 auto;
 }
+
+
+
+/* cards on main page*/
+.cardHolder{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  line-height: 20px;
+  gap: 20px;
+  border-radius: 10px;
+  margin: 20px 0 0px 0;
+  padding: 10px;
+  width: 100%;
+  height: 230px;
+  background-color: rgb(217, 217, 217);
+  color:  black;
+  border: 1px solid rgb(158, 158, 158);
+  transition: 200ms ease-in-out;
+}
+
+.cardHolder:hover{
+  transform: scale(1.01);
+  box-shadow: var(--shadow-3);
+
+}
+
+.character-image {
+  width:150px;
+  align-self: center;
+}
+.a-holder {
+  display: flex;
+  width: 100%;
+}
+
+.cardInfo{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.h4-character-names{
+  width: 100%;
+  color: black;
+  padding-bottom: 10px;
+}
+
+.p-character-cardInfo {
+  padding-top: 5px;
+  font-size: 17px;
+  font-weight: 600;
+
+}
+
+.p-character-cardInfo:hover{
+  color: rgb(113, 158, 255);
+  text-shadow:  2px 2px 5px rgb(123, 123, 123);
+  cursor: pointer;
+}
+
+/* ram-character-container */
+.ram-character-container{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 40px;
+justify-content: center;
+align-items: center;
+}
+
+.no-results-holder{
+  display : flex;
+  justify-content: center;
+  font-family: rickNmorty;
+}
+
+.no-result-item-show{
+  color: black;
+  letter-spacing: 5px;
+  font-weight: bolder;
+}
+
+/* error message */
+.error{
+  width: 100%;
+  color: red;;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  line-height: 20px;
+  border: 3px solid red;
+  margin: 50px 0 50px 0;
+  background-color: rgba(255, 0, 0, 0.438);
+}
+
+
+/* loader */
+
+
+
+
+.loaders {
+  margin: 50px;
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  
+}
+.loaders:after {
+  content: " ";
+  display: block;
+  width: 90px;
+  height: 90px;
+  margin: 10px;
+  border-radius: 50%;
+  border: 8px solid rgb(80, 165, 38);
+  border-color: rgb(62, 163, 11) transparent rgb(68, 129, 187) transparent;
+  animation: spin 1.2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.l-footer{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 20px 0;
+  font-weight: 500;
+}
+
+.slideshow{
+  transition: .3s;
+}
+
+.image-slideshow img{
+  border-radius: 5px;
+}
+
+.article, .search-bar{
+  transition: .3s;
+}
+
+
+@media screen and (min-width: 768px){
+
+  .image-carousel-container{
+    display: flex;
+    margin: 100px 20px 100px 20px;
+  }
+
+  .image-slideshow img{
+    display: flex;
+    width: 500px;
+    margin: 50px;
+    
+  }
+
+  article{
+    margin: 20px;
+  }
+
+  .h2-rNm-text{
+    font-size: 40px;
+  }
+
+  .h3-find-characters{
+    font-size: 25px;
+    width: 450px;
+    margin-top: 15px;
+  }
+
+  
+  .h3-find-characters::before{
+    content: '';
+    border: 2px solid black;
+    margin-top: 2px;
+    margin-left: -7px;
+    height: 49px;
+    margin-right: 3px;
+    position: absolute;
+    
+  }
+  
+  .searchBar{
+    display: flex;
+    margin-left: 27px;
+    width: 300px;
+    height: 35px;
+    align-items: center;
+    margin-bottom: 70px;
+    
+  }
+  
+  .cardHolder{
+    margin: 0 20px 0 20px;
+    align-items: center;
+    width: 400px;
+    justify-content: space-around;
+    gap: 0;
+    
+  }
+  .character-image{
+    width: 140px;
+  }
+
+  .h4-character-names{
+    font-size: 18px;
+    line-height: 30px;
+    width: 140px;  
+  }
+
+  /* .span-status-gender{
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;    
+  } */
+
+  .p-character-cardInfo {
+    font-size: 18px;
+  }
+
+
+}
+
+@media screen and (min-width: 1024px){
+
+  .image-carousel-container{
+    display: flex;
+    margin: 180px 20px 150px 20px;
+    background-color: transparent;
+  }
+
+  .image-slideshow{
+    width: 900px;
+    box-shadow: 0 0 25px -3px rgb(0, 0, 0,0.7);
+  }
+
+  .rnm-header-logo{
+    display: none;
+  }
+
+  .drop-down-nav {
+    display: none;
+  }
+
+  .nav-list{
+    display: block;
+    
+  }
+
+  .mdq-logo{
+    display: block;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ul-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .l-header{
+    margin: 0;
+    background-color: #b9b9b9;
+  }
+
+  .h2-rNm-text{
+    font-size: 40px;
+  }
+
+  .h3-find-characters{
+    font-size: 28px;;
+    margin-left:15px ;
+    width: 550px;
+  }
+
+  .h3-find-characters::before{
+    content: '';
+    border: 2px solid black;
+    margin-top: 2px;
+    margin-left: -8px;
+    height: 56px;
+    position: absolute;
+    
+  }
+
+  .article{
+    margin-left: 51px;
+  }
+
+  .searchBar{
+    width: 400px;
+    height: 40px;
+    margin: 20px 0 50px 51px;
+   
+  }
+
+  .search-bar::placeholder{
+    font-size: 18px;
+  }
+
+  .fa-solid{
+    font-size: 20px;
+  }
+
+  .ram-character-container{
+    display: flex;
+    flex-direction: row;
+   
+  }
+
+  
+  .cardHolder{
+    width: 400px;
+  }
+
+  .h4-character-names{
+    font-size: 20px;
+  }
+
+
+}
+
+@media screen and (min-width: 1129px){
+  .article{
+    margin-left:100px;
+  }
+
+  .searchBar{
+    margin: 20px 0 50px 100px;
+  }
+
+}
+
+
+
+@media screen and (min-width: 1440px){
+
+  .article{
+    margin-left:249px;
+  }
+
+  .searchBar{
+    margin: 20px 0 50px 249px;
+  }
+
+
+  
+
+}
+
+@media screen and (min-width: 1760px){
+  .article{
+    margin-left: 175px ;
+  }
+
+  .searchBar{
+    margin: 20px 0 50px 175px;
+  }
+
+
+}
+
+@media screen and (min-width: 1920px){
+  .article{
+    margin-left: 265px ;
+  }
+
+  .searchBar{
+    margin: 20px 0 50px 265px;
+  }
+
+  .ram-character-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 100px 50px 100px  ;
+   
+  }
+}
+
+@media screen and (min-width: 2500px){
+  .article{
+    margin-left: 315px;
+  }
+  .searchBar {
+    margin: 20px 0 50px 315px;
+    }
+}
+
+@media screen and (min-width: 2560px){
+
+  .article{
+    margin-left: 344px;
+  }
+
+.searchBar {
+  margin: 20px 0 50px 344px;
+  }
+}
+
+
+
+
+  
+
+
+
+
+
+
+
+

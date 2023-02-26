@@ -1,0 +1,267 @@
+
+
+/* back to characters buttons ond details page */
+.backBtn{
+    color: rgb(129, 129, 129);
+    align-items: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: .2s;
+    position: relative;
+    font-size: 19px;
+    text-shadow: 2px 4px 4px rgb(153 198 146);
+  
+  }
+  .backBtn:hover::after{
+   opacity: 100%;
+   width: 100%;
+  
+    
+  }
+
+
+.backBtn:active::after{
+ opacity: 100%;
+ width: 100%;
+
+  
+}
+  .backBtn:hover{
+    color: rgb(137, 137, 137);
+    transform: scale(1.03);
+  }
+
+  .backBtn:active{
+    color: rgb(137, 137, 137);
+    transform: scale(1.03);
+  }
+  
+  
+  
+  .backBtn::after{
+    content: '';
+    border-bottom: 2px solid #000000 ;
+    height: 3px;;
+    display: block;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: all .3s;
+    opacity: 0; 
+  }
+  
+  .container-backBtn{
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    margin: 20px 0 0 10px;
+    
+  
+  }
+  
+  /* back to character button on details page */
+  
+  
+  .details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
+.details-card-container{
+    display: flex;
+    width: fit-content;
+  }
+  .cardInfo-details{
+    width: 300px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  
+  .cardHolder-details{
+   display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    line-height: 20px;
+    gap: 20px;
+    border-radius: 10px;
+    margin: 30px 0 0px 0;
+    padding: 10px;
+    width: 100%;
+    height: 250px;
+    background-color: rgb(217, 217, 217);
+    color:  black;
+    border: 1px solid rgb(158, 158, 158);
+    transition: 200ms ease-in-out;
+    box-shadow: 0 0 25px -3px rgb(0 0 0 / 70%);
+  }
+  
+  .image-in-cardInfo{
+     width:150px;
+    align-self: center;
+  }
+  
+  /* status identifier: red, gray and green */
+.span-status-gender{
+    display: flex;  
+    gap: 3px;
+    font-size: 16px;
+    font-weight: 600;
+    flex-wrap: wrap;
+    line-height: 15px;
+  }
+  
+  .span-status-gender-alive::before {
+    content:"";
+    display: block;
+    animation: var(--animation-blink);
+    border-radius: 50%;
+    background-color: rgb(78, 162, 72);
+    width: 0.5rem;
+    height: 0.5rem;
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .span-status-gender-dead::before {
+    content:"";
+    animation: var(--animation-blink);
+    display: block;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 0);
+    width: 0.5rem;
+    height: 0.5rem;
+    align-self: center;
+  }
+  
+  .span-status-gender-unknown::before {
+    content:"";
+    animation: var(--animation-blink);
+    display: block;
+    border-radius: 50%;
+    background-color: rgb(119, 116, 116);
+    width: 0.5rem;
+    height: 0.5rem;
+    align-self: center;
+  }
+  /* status identifier: red, gray and green */
+
+
+  .section-featured{
+    margin: 80px 0 20px 20px;
+    display: flex;
+    width: 300px;;
+  }
+
+  .section-featured div{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 4px 4px rgb(153 198 146);
+  }
+
+  .loader-holder {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
+
+  @media screen and (min-width: 768px){
+    .backBtn{
+      margin: 20px 0 80px 20px;
+    }
+
+    .section-featured{
+      margin: 100px 0 60px 35px;
+    }
+
+    .featCharacters{
+      width: 400px;
+    }
+
+
+    
+  }
+
+  @media screen and (min-width: 1024px){
+
+    .backBtn{
+      margin: 20px 0 80px 20px;
+    }
+    .section-featured{
+      margin: 100px 0 60px 69px;
+    }
+
+    .main-card{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-right: 340px;
+      transition: .2s;
+    }
+
+    .container-backBtn{
+      margin: 20px 0 0 55px;
+    }
+
+
+    
+  
+
+    
+  }
+  @media screen and (min-width: 1440px){
+    .main-card{
+      margin-right: 47pc;
+      
+    }
+
+  }
+
+  @media screen and (min-width: 1760px){
+    .container-backBtn {
+      margin: 20px 0 0 210px;
+  }
+
+  .section-featured {
+    margin: 100px 0 60px 217px;
+}
+
+  }
+
+  @media screen and (min-width: 1920px){
+    .container-backBtn {
+      margin: 20px 0 0 290px;
+  }
+
+  .section-featured {
+    margin: 100px 0 60px 297px;
+}
+
+
+  }
+
+  @media screen and (min-width: 2500px){
+    .main-card {
+      margin-right: 88pc;
+  }
+
+  .details-card-container {
+    display: flex;
+    width: inherit;
+
+
+  }
+}
+
+
+
+  

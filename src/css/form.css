@@ -13,3 +13,320 @@
   border-radius: var(--radius-1);
   box-shadow: var(--shadow-1);
 }
+
+input, textarea {
+  transition: .3s ease-in-out;
+}
+
+
+.h2-contact {
+  display: flex;
+  color: black;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.h3-intro{
+  color: rgb(129, 129, 129);
+  text-shadow: 2px 4px 4px rgb(153 198 146);;
+  font-size: 35px;
+  margin: 10px 0 10px 0;
+}
+
+.form-text, .form-text-2{
+  color: #000000;
+  text-shadow: 2px 4px 4px rgb(153 198 146);;
+  font-size: 18px;
+
+
+}
+
+.form-text{
+  margin-top: 15px;
+}
+
+.l-footer{
+  color: black;
+}
+
+.form-section{
+  display: flex;;
+  flex-direction: column;
+  background-color: rgb(197, 197, 197);
+  padding: 20px 0 20px 0;
+  margin:20px 0 20px 0;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  position: relative;
+  justify-content: center;
+
+
+}
+
+.form-label {
+  color: black;
+  padding: 10px 0 8px 0;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* .form input{
+  background-color: rgb(177, 177, 177);
+  margin-bottom: 8px;
+  color: black;
+  border: 1px solid rgb(173, 173, 173);
+  border-radius: 5px;
+
+} */
+
+.form-input{
+  background-color: rgb(177, 177, 177);
+  margin-bottom: 8px;
+  color: black;
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 5px;
+
+}
+
+/* form input style */
+.first-name-input{
+  color: #000000;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);;
+  outline: none;
+}
+
+.last-name-input{
+  color: #000000;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);;
+  outline: none;
+}
+
+.email-input{
+  color: #000000;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);;
+  outline: none;
+}
+
+.password-input{
+  color: #000000;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);;
+  outline: none;
+}
+
+
+
+
+/* form input style */
+
+
+
+
+.p-message{
+  color: black;
+  padding: 10px 0 10px 0;
+  font-weight: 500;
+ }
+
+ .form-container input{
+  height: 35px;
+ }
+
+ .form-group{
+  display: flex;
+  flex-direction: column;
+ }
+
+ .submitBtn{
+  display: flex;
+  margin-left: 10px;
+ }
+
+ .submit{
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  margin-top: 10px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .2s;
+  
+ }
+
+ .submit:hover{
+  background-color:  rgb(211, 243, 205);
+  transform: scale(1.01);
+ }
+
+ .submit:active{
+  background-color:  rgb(211, 243, 205);
+  transform: scale(1.01);
+ }
+
+ textarea{
+  color: black;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background-color: #f5f5f5;
+ }
+
+ textarea::placeholder{
+  color: #000000;
+  padding-top: 10px;
+  font-family: sans-serif;
+  
+ }
+ textarea:focus-visible {
+  outline: 0px !important;
+}
+
+:placeholder-shown{
+  padding-left: 10px;
+  color: rgb(128, 123, 123);
+}
+
+
+
+@keyframes shake {
+
+  0%{
+    transform:translate(0)
+  }
+
+  40%{
+    transform: translate(10px);
+  }
+
+  100%{
+    transform: translate(-10px);
+  }
+}
+
+
+/* .form input:focus-visible{
+  border: 1px solid transparent;
+  outline-offset: -40px solid transparent;
+} */
+
+
+/* error messages */
+
+#last-name-error{
+  color: red;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#first-name-error{
+  color: red;
+  font-size: 15px;
+  font-weight: 300;
+  padding-top: 5px;
+}
+
+#email-error{
+  color: red;
+  font-size: 15px;
+  font-weight: 300;
+  padding-top: 5px;
+}
+
+#password-error{
+  color: red;
+  font-size: 15px;
+  font-weight: 300;
+  padding-top: 5px;
+
+}
+
+#textArea-error{
+  color: red;
+  font-size: 15px;
+  font-weight: 300;
+  padding-top: 5px;
+  
+
+}
+
+
+@media screen and (min-width: 768px){
+  .form-section{
+    margin: 20px;
+  }
+  input, textarea{
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 1020px){
+  .form-section{
+    margin: 20px;
+    max-width: 1000px;
+    align-items: center;
+    padding: 50px 0 50px 0;
+  }
+
+  input, label, textarea{
+    margin-left: 20px;
+    width: 600px;
+  }
+
+  .p-message{
+    margin-left: 20px;
+  }
+
+  #last-name-error, #textArea-error, #password-error, #first-name-error, #email-error {
+    margin-left: 20px;
+  }
+
+}
+
+
+
+@media screen and (min-width: 1440px){
+  .form-section{
+    margin: 50px 225px;
+  }
+
+  input, label{
+    margin-left: 20px;
+    width: 600px;
+    height: 40px;
+  }
+
+  .p-message{
+    margin-left: 20px;
+  }
+
+  
+
+}
+
+@media screen and (min-width: 1920px){
+  article {
+    margin-left: 231px;
+}
+}
+
+@media screen and (min-width: 2500px){
+  article {
+    margin-left: 233px;
+}
+}
+
+
+
+
+

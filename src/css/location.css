@@ -1,0 +1,171 @@
+@font-face {
+    font-family: outrun;
+    src: url(src/fonts/GrindAndDeath_Demo.ttf);
+}
+.h1-section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 15px ;
+    
+    
+    
+}
+
+.h1-location{
+    color:  rgb(129, 129, 129);;
+    font-size: 38px;
+    font-weight: 800;
+    text-shadow: 6px 4px  9px rgb(184, 241, 176);
+}
+
+
+
+/* box information new */
+
+.location-card-info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 20px;
+}
+
+.h5-location-name{
+    padding: 10px;
+    position: relative;;
+    color: black;
+    /* font-family: outrun; */
+    letter-spacing: 1px;
+    font-size: 18px;
+    transition: .3s;
+    width: 100%;
+}
+
+
+.box:hover{
+    text-shadow:6px 4px 9px rgb(112 158 105); 
+    color: white;
+    background-color: rgb(184, 241, 176);
+}
+.box:active{
+    text-shadow:6px 4px 9px rgb(112 158 105); 
+    color: white;
+    background-color: rgb(184, 241, 176);
+}
+
+
+.box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;;
+    height: 80px;
+    background-color:rgb(217, 217, 217);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 50px ;
+    width: 300px;    
+    transition: .3s ease;;
+}
+
+.fa-angle-down{
+    margin: 0;
+    padding: 0 15px 0 0;
+}
+
+.card-info-elements{
+    padding: 10px;
+    background-color: rgb(217, 217, 217);
+    color: black;
+    font-weight: 600;
+    margin-top: 5px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .25s;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius:5px ;
+    width: 300px;
+}
+.card-info-elements:hover{
+    color: rgb(80, 135, 255);
+    text-shadow:  2px 2px 5px rgb(123, 123, 123);
+}
+
+.card-info-elements:active{
+    color: rgb(80, 135, 255);
+    text-shadow:  2px 2px 5px rgb(123, 123, 123);
+}
+
+
+.card-box{
+    display: none;
+}
+
+.card-box-show{
+    display: block;
+}
+
+.loader-holder {
+    display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+
+  @media screen and (min-width: 768px){
+    .h1-section {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 40px;
+    }
+
+    .location-card-info{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box{
+        width: 350px;
+
+    }
+
+    .card-info-elements{
+        width: 350px;
+    }
+  }
+
+  @media screen and (min-width: 1020px){
+
+    .location-card-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+  }
+
+  @media screen and (min-width: 1440px){
+
+
+    .h1-location{
+        margin: 50px 0px 30px 120px;
+
+    }
+    .location-card-info{
+        margin: 0 50px 0 50px;
+    }
+
+  }
+
+ 
+
