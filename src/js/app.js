@@ -19,7 +19,6 @@ dropDownBtn.addEventListener('click', () => {
     //Search bar on keyup event
     input.addEventListener("keyup", (e) => {
         const searchValue = e.target.value.trim().toLowerCase();
-        // console.log(searchValue)
         fetchCharacters(searchValue)
         
         
@@ -31,10 +30,8 @@ dropDownBtn.addEventListener('click', () => {
         
         try {
             const response = await fetch (url)
-            //  console.log(response);
             
             const results = await response.json();
-            // console.log(results.results);
             
             const characters = results.results
             

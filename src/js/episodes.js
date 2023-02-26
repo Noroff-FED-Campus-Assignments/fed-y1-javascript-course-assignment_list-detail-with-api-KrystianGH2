@@ -20,11 +20,9 @@ async function fetchEpisodes() {
         
                 const response = await fetch (urlLocation);
         
-                // console.log(response);
         
                 const episodes = await response.json();
         
-                // console.log(episodes.results);
         
                 let episodesData = episodes.results
         
@@ -38,7 +36,7 @@ async function fetchEpisodes() {
                         <h5 class="h5-location-name"> ${episode.name}</h5>
                         <span><i class="fa-solid fa-angle-down"></i></span>
                     </div>
-                    <div class="card-box animate__animated animate__fadeInRight">
+                    <div class="card-box animate__animated animate__fadeInDown">
                         <div class="card-info-elements">ID: ${episode.id}</div>
                         <div class="card-info-elements">Episode: ${episode.episode}</div>
                         <div class="card-info-elements">ID: ${episode.air_date}</div>

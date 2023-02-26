@@ -18,6 +18,8 @@ dropDownBtn.addEventListener('click', () => {
     const lastNameJs = document.querySelector('#last-name-js');
     const emailJs = document.querySelector('#email-js');
     const passwordJs = document.querySelector('#password-js');
+    const textAreaJs = document.querySelector('#text-area-js');
+    const submitJs = document.querySelector('#submit-js');
   
     
     formJs.addEventListener('submit', (e) => {
@@ -57,10 +59,9 @@ dropDownBtn.addEventListener('click', () => {
     firstNameJs.addEventListener('keyup', () => {
         const firstNameError = document.querySelector('#first-name-error');
         if (!firstNameJs.value.match(/^[a-zA-Z]{2,}/)) {
-            firstNameError.innerHTML = "Name must be atleast 2 characters";
+            firstNameError.innerHTML = "Name must be at least 2 characters";
             firstNameJs.style.borderColor =  "red";
             firstNameJs.style.animation = "shake .13s 3";
-
             return false;
 
         }
@@ -75,7 +76,7 @@ dropDownBtn.addEventListener('click', () => {
     lastNameJs.addEventListener('keyup', () => {
         const lastNameError = document.querySelector('#last-name-error');
         if (!lastNameJs.value.match(/^[a-zA-Z]{2,}/)) {
-            lastNameError.innerHTML = "Name must be atleast 2 characters";
+            lastNameError.innerHTML = "Name must be at least 2 characters";
             lastNameJs.style.borderColor =  "red";
             lastNameJs.style.animation = "shake .13s 3";
             return false;
@@ -87,9 +88,23 @@ dropDownBtn.addEventListener('click', () => {
         return true;
         
     })
+    
+    textAreaJs.addEventListener('keyup', () => {
+        const textAreaError = document.querySelector('#textArea-error');
+        if  (!textAreaJs.value.match(/^[a-zA-Z]{25,}/)){
+            textAreaError.innerHTML = "Message must be at least 25 characters.";
+            textAreaJs.style.borderColor =  "red";
+            return false;
+        }
+        
+        textAreaError.innerHTML = "";
+        textAreaJs.style.borderColor =  "green";
+        return true;
+        
+    })
 
     emailJs.addEventListener('keyup', () => {
-        const emailError = document.querySelector('#last-name-error');
+        const emailError = document.querySelector('#email-error');
         if (!emailJs.value.match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/) ){
             emailError.innerHTML = "Please enter a valid email.";
             emailJs.style.borderColor =  "red";
@@ -105,33 +120,31 @@ dropDownBtn.addEventListener('click', () => {
     })
 
     passwordJs.addEventListener('keyup', () => {
+        const passwordError = document.querySelector('#password-error');
         if (!passwordJs.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/)){
-            // passwordError.innerHTML = "Please enter a valid password.";
-            
+            passwordError.innerHTML = "Please enter a valid password.";
             passwordJs.style.borderColor =  "red";
+            passwordJs.style.animation = "shake .13s 3";
             return false;
         }
         
-        passwordJs.innerHTML = "";
+        passwordError.innerHTML = "";
         passwordJs.style.borderColor =  "green";
         return true;
         
     })
 
-    passwordJs.addEventListener('invalid', () => {
-        const passwordError = document.querySelector('#password-error');
+    submitJs.addEventListener('submit', () => {
+
         if (!passwordJs.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/)){
-            passwordError.innerHTML = "Please enter a valid password.";
-            
-            passwordJs.style.borderColor =  "red";
-            return false;
+            console.log('success')
         }
-        
-        passwordJs.innerHTML = "";
-        passwordJs.style.borderColor =  "green";
-        return true;
-        
     })
+
+
+
+
+
     
 
 

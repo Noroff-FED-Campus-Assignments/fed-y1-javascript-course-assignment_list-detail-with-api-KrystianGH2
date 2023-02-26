@@ -10,11 +10,9 @@ async function fetchLocation() {
         
                 const response = await fetch (urlLocation);
         
-                // console.log(response);
         
                 const location = await response.json();
         
-                // console.log(location.results);
         
                 let locationData = location.results
         
@@ -28,7 +26,7 @@ async function fetchLocation() {
                         <h5 class="h5-location-name"> ${location.name}</h5>
                         <span><i class="fa-solid fa-angle-down"></i></span>
                     </div>
-                    <div class="card-box animate__animated animate__fadeInRight">
+                    <div class="card-box animate__animated animate__fadeInDown">
                         <div class="card-info-elements"> ${location.dimension}</div>
                         <div class="card-info-elements">Type: ${location.type}</div>
                         <div class="card-info-elements">ID: ${location.id}</div>
@@ -47,7 +45,6 @@ async function fetchLocation() {
 
                 })
                 
-                
         
             } catch(error) {
                 locationContainer.innerHTML = displayError()        
@@ -56,11 +53,6 @@ async function fetchLocation() {
             
             fetchLocation()
 
-            
-            
-            
-            
-            
             const dropDownBtn = document.querySelector('.drop-down-nav');
             const navList = document.querySelector(".nav-list");
             dropDownBtn.addEventListener('click', () => {

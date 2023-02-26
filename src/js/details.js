@@ -31,18 +31,22 @@ async function fetchCharacters() {
 fetchCharacters()
 
 function createHtml(resultOfCharacters) {
-    detailsCardInfo.innerHTML += ` <div class="cardHolder-details">
-    <img class ="image-in-cardInfo"src="${resultOfCharacters.image}" alt="${resultOfCharacters.name}" />
-    <div class="cardInfo-details">
-    <h5 class = "h4-character-names"> ${resultOfCharacters.name}</h5>
-    <div class = "span-status-gender">
-    <span class= "span1"> ${resultOfCharacters.status}</span><span> - ${resultOfCharacters.species}</span>  
-    </div>
-    <p class ="p-character-cardInfo"> ${resultOfCharacters.gender}</p>
-    <p class ="p-character-cardInfo"><strong>ID:</strong> ${resultOfCharacters.id}</p>
-    <p class ="p-character-cardInfo"><strong>Location:</strong> ${resultOfCharacters.location.name}</p>
-    
-    </div>  `
+    detailsCardInfo.innerHTML += ` 
+    <div class= "main-card">
+        <div class="cardHolder-details">
+            <img class ="image-in-cardInfo"src="${resultOfCharacters.image}" alt="${resultOfCharacters.name}" />
+            <div class="cardInfo-details">
+             <h5 class = "h4-character-names"> ${resultOfCharacters.name}</h5>
+                <div class = "span-status-gender">
+                    <span class= "span1"> ${resultOfCharacters.status}</span><span> - ${resultOfCharacters.species}</span>  
+                </div>
+                <p class ="p-character-cardInfo"> ${resultOfCharacters.gender}</p>
+                <p class ="p-character-cardInfo"><strong>ID:</strong> ${resultOfCharacters.id}</p>
+                <p class ="p-character-cardInfo"><strong>Location:</strong> ${resultOfCharacters.location.name}</p>
+
+        </div> 
+     </div>
+     </div> `
     
     if(resultOfCharacters.status === "Alive") {
         // console.log(resultOfCharacters.status)
@@ -80,17 +84,17 @@ async function fetchExtraCards(){
 
         for (let i = 0; i < listOfData.length; i++) {
 
-            extraCards.innerHTML +=`<div class="details">
-            <div class="cardHolder-details">
+            extraCards.innerHTML +=`<div class="details ">
+            <div class="cardHolder-details featCharacters">
             <img class ="image-in-cardInfo"src="${listOfData[i].image}" alt="${listOfData[i].name}" />
             <div class="cardInfo-details">
             <h5 class = "h4-character-names"> ${listOfData[i].name}</h5>
             <div class = "span-status-gender">
             <span class= "span1"> ${listOfData[i].status}</span><span> - ${listOfData[i].species}</span>  
             </div>
-            <p class ="p-character-cardInfo"> ${listOfData[i].gender}</p>
-            <p class ="p-character-cardInfo"><strong>ID:</strong> ${listOfData[i].id}</p>
-            <p class ="p-character-cardInfo"><strong>Location:</strong> ${listOfData[i].location.name}</p>
+            <p class ="p-character-cardInfo "> ${listOfData[i].gender}</p>
+            <p class ="p-character-cardInfo "><strong>ID:</strong> ${listOfData[i].id}</p>
+            <p class ="p-character-cardInfo "><strong>Location:</strong> ${listOfData[i].location.name}</p>
             
             </div></div>`
 
