@@ -9,7 +9,7 @@
     font-weight: bold;
     transition: .2s;
     position: relative;
-    font-size: 18px;
+    font-size: 19px;
     text-shadow: 2px 4px 4px rgb(153 198 146);
   
   }
@@ -57,6 +57,7 @@
     position: relative;
     justify-content: flex-start;
     margin: 20px 0 0 10px;
+    
   
   }
   
@@ -65,6 +66,8 @@
   
   .details{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
 
@@ -151,14 +154,15 @@
   /* status identifier: red, gray and green */
 
 
-  /* section-featured */
   .section-featured{
-    margin: 50px 0 20px 10px;
+    margin: 80px 0 20px 20px;
+    display: flex;
+    width: 300px;;
   }
 
   .section-featured div{
     color: #000000;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
     letter-spacing: 1px;
     text-shadow: 2px 4px 4px rgb(153 198 146);
@@ -169,4 +173,95 @@
     align-self: center;
     justify-self: center;
   }
+
+  @media screen and (min-width: 768px){
+    .backBtn{
+      margin: 20px 0 80px 20px;
+    }
+
+    .section-featured{
+      margin: 100px 0 60px 35px;
+    }
+
+    .featCharacters{
+      width: 400px;
+    }
+
+
+    
+  }
+
+  @media screen and (min-width: 1024px){
+
+    .backBtn{
+      margin: 20px 0 80px 20px;
+    }
+    .section-featured{
+      margin: 100px 0 60px 69px;
+    }
+
+    .main-card{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-right: 340px;
+      transition: .2s;
+    }
+
+    .container-backBtn{
+      margin: 20px 0 0 55px;
+    }
+
+
+    
+  
+
+    
+  }
+  @media screen and (min-width: 1440px){
+    .main-card{
+      margin-right: 47pc;
+      
+    }
+
+  }
+
+  @media screen and (min-width: 1760px){
+    .container-backBtn {
+      margin: 20px 0 0 210px;
+  }
+
+  .section-featured {
+    margin: 100px 0 60px 217px;
+}
+
+  }
+
+  @media screen and (min-width: 1920px){
+    .container-backBtn {
+      margin: 20px 0 0 290px;
+  }
+
+  .section-featured {
+    margin: 100px 0 60px 297px;
+}
+
+
+  }
+
+  @media screen and (min-width: 2500px){
+    .main-card {
+      margin-right: 88pc;
+  }
+
+  .details-card-container {
+    display: flex;
+    width: inherit;
+
+
+  }
+}
+
+
+
   

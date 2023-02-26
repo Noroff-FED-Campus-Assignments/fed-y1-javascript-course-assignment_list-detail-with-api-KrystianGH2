@@ -199,6 +199,9 @@ body {
 }
 
 .searchBar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 250px;
   border-radius: 5px;
   background-color: rgb(190, 190, 190);
@@ -411,6 +414,10 @@ align-items: center;
 
 .slideshow{
   transition: .3s;
+}
+
+.image-slideshow img{
+  border-radius: 5px;
 }
 
 
@@ -627,6 +634,16 @@ align-items: center;
     margin: 100px 100px 50px 100px  ;
    
   }
+}
+
+@media screen and (min-width: 2500px){
+  article {
+    margin-left: 344px;
+}
+
+.searchBar {
+  margin: 20px 0 50px 348px;
+}
 }
 
 

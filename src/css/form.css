@@ -14,6 +14,10 @@
   box-shadow: var(--shadow-1);
 }
 
+input, textarea {
+  transition: .3s ease-in-out;
+}
+
 
 .h2-contact {
   display: flex;
@@ -52,6 +56,7 @@
   padding: 20px 0 20px 0;
   margin:20px 0 20px 0;
   border-radius: 10px;
+  transition: .3s;
 }
 
 .form-container{
@@ -171,7 +176,6 @@
  }
 
  textarea{
-  background-color: rgb(177, 177, 177);
   color: black;
   border-radius: 5px;
   border: 1px solid transparent;
@@ -182,17 +186,17 @@
   color: #000000;
   padding-top: 10px;
   font-family: sans-serif;
-  outline-offset: none;
   
  }
  textarea:focus-visible {
-  outline-offset: 0px;
+  outline: 0px !important;
 }
 
 :placeholder-shown{
   padding-left: 10px;
   color: rgb(128, 123, 123);
 }
+
 
 
 @keyframes shake {
@@ -247,16 +251,31 @@
 
 }
 
+#textArea-error{
+  color: red;
+  font-size: 15px;
+  font-weight: 300;
+  padding-top: 5px;
+  
+
+}
+
 
 @media screen and (min-width: 768px){
   .form-section{
     margin: 20px;
+  }
+  input, textarea{
+    width: 500px;
   }
 }
 
 @media screen and (min-width: 1020px){
   .form-section{
     margin: 20px;
+    max-width: 1000px;
+    align-items: center;
+    padding: 50px 0 50px 0;
   }
 
   input, label, textarea{
@@ -268,9 +287,13 @@
     margin-left: 20px;
   }
 
-  
+  #last-name-error, #textArea-error, #password-error, #first-name-error, #email-error {
+    margin-left: 20px;
+  }
 
 }
+
+
 
 @media screen and (min-width: 1440px){
   .form-section{
@@ -289,6 +312,18 @@
 
   
 
+}
+
+@media screen and (min-width: 1920px){
+  article {
+    margin-left: 231px;
+}
+}
+
+@media screen and (min-width: 2500px){
+  article {
+    margin-left: 233px;
+}
 }
 
 
